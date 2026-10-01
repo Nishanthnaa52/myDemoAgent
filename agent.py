@@ -3,7 +3,7 @@ from .tools import search_zozothemes, get_zozothemes_categories, get_theme_detai
 
 # Specialized Agent 1: ZozoThemes Website Details & Theme Advisory
 zozothemes_company_agent = Agent(
-    model='groq/qwen/qwen3.8-27b',
+    model='groq/canopylabs/orpheus-v1-english',
     name='zozothemes_company_agent',
     description="""
         Official company specialist for ZozoThemes (https://zozothemes.com/).
@@ -45,7 +45,7 @@ zozothemes_company_agent = Agent(
 
 # Specialized Agent 2: Social Media Marketing Tool Advisor
 social_media_marketing_agent = Agent(
-    model='groq/qwen/qwen3.8-27b',
+    model='groq/canopylabs/orpheus-v1-english',
     name='social_media_marketing_agent',
     description="""
         Social media marketing strategist and tool advisor.
@@ -86,7 +86,7 @@ social_media_marketing_agent = Agent(
 
 # Root agent that coordinates and delegates to specialist agents
 root_agent = Agent(
-    model='groq/qwen/qwen3.8-27b',
+    model='groq/canopylabs/orpheus-v1-english',
     name='root_agent',
     description="""
         Coordinator and primary entry-point agent.
