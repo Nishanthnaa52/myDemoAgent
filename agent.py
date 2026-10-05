@@ -1,9 +1,10 @@
 from google.adk.agents.llm_agent import Agent
+from .model_config import GEMINI_MODEL
 from .tools import search_zozothemes, get_zozothemes_categories, get_theme_details
 
 # Specialized Agent 1: ZozoThemes Website Details & Theme Advisory
 zozothemes_company_agent = Agent(
-    model='groq/canopylabs/orpheus-v1-english',
+    model=GEMINI_MODEL,
     name='zozothemes_company_agent',
     description="""
         Official company specialist for ZozoThemes (https://zozothemes.com/).
@@ -45,7 +46,7 @@ zozothemes_company_agent = Agent(
 
 # Specialized Agent 2: Social Media Marketing Tool Advisor
 social_media_marketing_agent = Agent(
-    model='groq/canopylabs/orpheus-v1-english',
+    model=GEMINI_MODEL,
     name='social_media_marketing_agent',
     description="""
         Social media marketing strategist and tool advisor.
@@ -86,7 +87,7 @@ social_media_marketing_agent = Agent(
 
 # Root agent that coordinates and delegates to specialist agents
 root_agent = Agent(
-    model='groq/canopylabs/orpheus-v1-english',
+    model=GEMINI_MODEL,
     name='root_agent',
     description="""
         Coordinator and primary entry-point agent.
